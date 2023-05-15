@@ -47,6 +47,7 @@ echo "${name} is ${age} years old";
 // Concatenate Strings
 
 echo '<h3>' . $name . ' is ' . $age . ' years old</h3>';
+echo "<h3>  $name  is  $age years old</h3>";
 
 // Arithmetic Operators
 

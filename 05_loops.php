@@ -3,39 +3,57 @@
 /* -------- Loops & Iteration ------- */
 
 /* ------------ For Loop ------------ */
-
-/*
-** For Loop Syntax
-  for (initialize; condition; increment) {
-  // code to be executed
-  }
-*/
+for ($x = 4; $x < 10; $x++) {
+  echo $x . '<br>';
+}
 
 
 /* ------------ While Loop ------------ */
-
-/*
-** While Loop Syntax
-  while (condition) {
-  // code to be executed
-  }
-*/
-
+$x = 1;
+while ($x < 5) {
+  echo $x . '<br>';
+  $x++;
+}
 
 /* ---------- Do While Loop --------- */
 
-/*
-** Do While Loop Syntax
-  do {
-  // code to be executed
-  } while (condition);
-
-do...while loop will always execute the block of code once, even if the condition is false.
-*/
+//do...while loop will always execute the block of code once, even if the condition is false.
+do {
+  echo '<br>';
+  echo $x . '<br>';
+  $x++;
+} while ($x < 0);
 
 
 
 /* ---------- Foreach Loop ---------- */
+$posts = ['First Post', 'Second Post', 'Third Post'];
+
+for ($x = 0; $x < count($posts); $x++) { // 数列的长度 chount length
+  echo $posts[$x];
+}
+echo '<br>';
+
+foreach ($posts as $post) { //js .foreach((post)=>{})
+  echo $post . '<br>';;
+}
+
+foreach ($posts as $index => $post) { //js .foreach((post)=>{})
+  echo $index + 1 . $post . '<br>';
+}
+
+$persons = [
+  ['first_name' => 'Jane', "last_name" => 'Lu'],
+  ['first_name' => 'John', "last_name" => 'Liu']
+];
+
+foreach ($persons as $index => $person) { //js .foreach((post)=>{})
+  echo $index + 1 . $person . '<br>';
+}
+$person =  ['first_name' => 'Jane', "last_name" => 'Lu'];
+foreach ($person as $key => $value) {
+  echo "$key : $value  <br>";
+}
 
 /*
 ** Foreach Loop Syntax

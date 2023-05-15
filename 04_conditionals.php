@@ -17,19 +17,50 @@
 
 /* ---------- If & If-Else Statements --------- */
 
-/*
-** If Statement Syntax
-if (condition) {
-  // code to be executed if condition is true
+$age = 17;
+if ($age >= 18) {
+  echo 'You are old enough to vote.';
+} else {
+  echo 'Sorry, you are not old enough to vote.';
 }
-*/
+echo '<br>';
+
+$t = date("H"); //date 函数 读取目前的时间
+if ($t < 12) {
+  echo 'Good Morning';
+} elseif ($t < 17) {
+  echo 'Good Afternoon';
+}
+echo '<br>';
+
+$posts = ['First Post'];
+if (!empty($posts)) {
+  echo 'Time is there';
+}
+echo '<br>';
+
+var_dump($posts);
+echo '<br>';
 
 /* -------- Ternary Operator -------- */
-/*
-  The ternary operator is a shorthand if statement.
-  Ternary Syntax:
-    condition ? true : false;
-*/
+
+echo !empty($posts) ? $posts[0] : 'No Posts';
+//$firstPost = !empty($posts) ? $posts[0] : null;
+$firstPost =  $posts[0] ?? null;
+var_dump($firstPost);
+echo '<br>';
 
 
 /* -------- Switch Statements ------- */
+
+$favColor = 'blue';
+switch ($favColor) {
+  case 'red':
+    echo 'Your favorite color is red.';
+    break;
+  case 'green':
+    echo 'Your favorite color is green.';
+    break;
+  default:
+    echo 'Your favorite color is neither green nor red.';
+}
