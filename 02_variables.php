@@ -29,11 +29,17 @@ $hasKids = true; // Boolean
 $cashOnHand = 10.5; //Float
 
 var_dump($cashOnHand);
+echo '<br>';
+
 
 /* --- Adding variables to strings -- */
 
 // Double quotes can be used to add variables to strings
+echo '$name is $age years old';
+echo '<br>';
+
 echo "$name is $age years old";
+echo '<br>';
 
 // Better to do this
 echo "${name} is ${age} years old";
@@ -45,12 +51,31 @@ echo '<h3>' . $name . ' is ' . $age . ' years old</h3>';
 // Arithmetic Operators
 
 echo 5 + 5;
+echo '<br>';
 echo 10 - 6;
+echo '<br>';
 echo 5 * 10;
+echo '<br>';
 echo 10 / 2;
+echo '<br>';
+echo 11 % 2;
+echo '<br>';
+echo 2 . 2;
+echo '<br>';
+
+$x = 5 + 5;
+var_dump($x);
+
+$y = '5' + '5';
+var_dump($y);
+echo '<br>';
+
 
 // Constants - Cannot be changed
 define('HOST', 'localhost');
 define('USER', 'root');
 
 var_dump(HOST);
+echo '<br>';
+
+var_dump(USER);
