@@ -8,11 +8,17 @@ function registerUser($email)
   global $y;
   echo $y;
   $x = 10; // only in function
-  echo $email . 'is registered';
+  echo $email;
 }
-
-echo $x;
 registerUser('123@hotmail.com');
+echo '<br>';
+
+$registerUserTwo = function ($email) use ($y) {
+  echo $y;
+  echo $email;
+};
+
+$registerUserTwo('456@hotmail.com');
 echo '<br>';
 
 function sum($n1, $n2)
