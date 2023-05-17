@@ -20,7 +20,7 @@ function inverse($x)
 try {
   echo inverse(0);
 } catch (Exception $e) {
-  echo 'Caught Exception', $e->getMessage(), ' ';
+  echo 'Caught Exception:', $e->getMessage(), ' '; // give the value
 } finally {
   echo 'First Finally';
 }
@@ -28,7 +28,7 @@ try {
 try {
   echo inverse(0);
 } catch (Exception $e) {
-  echo 'Caught Exception', $e->getMessage(), ' ';
+  echo 'Caught Exception:', $e->getMessage(), ' ';
 } finally {
   echo 'Second Finally';
 }
